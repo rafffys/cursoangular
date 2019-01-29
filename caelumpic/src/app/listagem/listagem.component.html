@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header class="jumbotron">
+    <h1 class="text-center">{{ title }}</h1>
+</header>
+<main class="container">
+    <div class="row-mb-4">
+        <div class="col-sm-12">
+            <form class="input-group">
+                <span class="input-group-prepend">
+                    <a routerLink="/cadastro" class="btn btn-primary">Nova Foto</a>
+                </span>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <app-painel *ngFor="let foto of listaFotos" titulo="{{foto.titulo}}" class="col-md-3">
+            <app-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></app-foto>
+        </app-painel>
+    </div>
+</main>
