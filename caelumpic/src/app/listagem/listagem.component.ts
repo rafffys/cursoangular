@@ -12,6 +12,6 @@ export class ListagemComponent {
         http.get('http://localhost:3000/v1/fotos').subscribe(
             fotos => this.listaFotos = fotos
           ,
-           erro => window.alert(erro));
+           erro => window.alert('Erro ao acessar os dados!'));
     }
 }
