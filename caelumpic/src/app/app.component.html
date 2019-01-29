@@ -3,5 +3,7 @@
   <h1 class="text-center">{{ title }}</h1>
 </header>
 <main class="container">
-  <app-foto *ngFor="let foto of listaFotos" titulo="{{foto.titulo}}" url="{{foto.url}}"></app-foto>
+  <app-painel *ngFor="let foto of listaFotos" titulo="{{foto.titulo}}" class="col-md-2">
+      <app-foto  url="{{foto.url}}" titulo="{{foto.titulo}}"></app-foto>
+  </app-painel>
 </main>
